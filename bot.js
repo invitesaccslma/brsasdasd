@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "^"
-var adminprefix = '^'
+var prefix = "*"
+var adminprefix = '*'
 
 
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("^obc")) {
+    if (message.content.startsWith("*obc")) {
                  if (!message.member.hasPermission(""))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -23,7 +23,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "^";
+  var prefix = "*";
 
   client.on("message", message => {
   
@@ -49,7 +49,7 @@ client.on('ready',  () => {
  
 
   client.on('message', msg => {
-    if(msg.content === '^adminhelp')
+    if(msg.content === '*adminhelp')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
@@ -61,25 +61,25 @@ client.on('ready',  () => {
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       ^obc | لأرسال برود كاست للكل
+       *obc | لأرسال برود كاست للكل
 
-       ^bc  |  لأرسال برود كاست للأونلاين
+       *bc  |  لأرسال برود كاست للأونلاين
 
        Admin Commands :
 
-       ^setw | WATCHING
+       *setw | WATCHING
 
-       ^setl | LISTENING
+       *setl | LISTENING
 
-       ^sets | STREAMING
+       *sets | STREAMING
 
-       ^setg | PLAYING
+       *setg | PLAYING
 
-       ^setname | CHANGE NAME 
+       *setname | CHANGE NAME 
 
-       ^setav | CHANGE AVATAR
+       *setav | CHANGE AVATAR
 
-       ^leave | THE BOT LEAVE FROM THE SERVER
+       *leave | THE BOT LEAVE FROM THE SERVER
        ** `)
    message.author.sendEmbed(embed)
    
